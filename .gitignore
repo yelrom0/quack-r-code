@@ -1,0 +1,6 @@
+# ignore python configs and binaries for a clean workspace
+**/__pycache__**
+.pytest_cache
+
+# venv should be created on build
+venv
