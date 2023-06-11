@@ -1,0 +1,13 @@
+version: "3.2"
+
+services:
+  api:
+    build: .
+    ports:
+      - 6562:8000
+    volumes:
+      - type: bind
+        source: ~/Documents/code/quack-r-code
+        target: /src
+    restart: unless-stopped
+    container_name: chat-r-code
