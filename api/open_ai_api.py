@@ -15,7 +15,7 @@ class AIApi:
     def __init__(self):
         # Load environment variables and prompt file
         self.env = dotenv_values(".env")
-        chat_gpt_prompt_file = open("../prompt.txt", "r")
+        chat_gpt_prompt_file = open("./prompt.txt", "r")
 
         # Constants
         self.SYSTEM_PROMPT = chat_gpt_prompt_file.read()
