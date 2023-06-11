@@ -8,7 +8,7 @@ _note: This guide is for Linux/Mac and assumes you have docker and docker-compos
 
 1. If you haven't already, get an OpenAI API key at [Open AI](https://beta.openai.com/).
 2. Next, copy `default.env` to `.env`, as `.env` is what's actually read by the backend.
-3. For now this is just a placeholder for another step. I made this line longer than it needed to though as you're probably still reading this.
+3. For now this is just a placeholder for another step. I made this line longer than it needed to though as you're probably still reading this. If you got to here and are still reading, you're a masochist, but while you're here check out [the system prompt](prompt.txt). It, along with the user prompt that you set, is what guides chatGPT's response, which is then processed by Stable Diffusion along with the QR code generated from your supplied URL [you can click here for that code](api/qr_code.py). If you made it to the end, you probably realised there was a little bit of good stuff in there, but now I'm wasting your time again. Thank-you for coming to my Ted Talk.
 4. Run `docker-compose up -d` to build the image and start the backend.
 5. Open your browser and [click on this link](http://localhost:6562/docs). If this doesn't work, check that no services are already running on port 6562.
 6. Put in the details.
