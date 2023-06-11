@@ -8,9 +8,9 @@ _note: This guide is for Linux/Mac and assumes you have docker and docker-compos
 
 1. If you haven't already, get an OpenAI API key at [Open AI](https://beta.openai.com/).
 2. Next, copy `default.env` to `.env`, as `.env` is what's actually read by the backend.
-3. 
+3. For now this is just a placeholder for another step. I made this line longer than it needed to though as you're probably still reading this.
 4. Run `docker-compose up -d` to build the image and start the backend.
-5. Open your browser and go to `http://localhost:6562`. If this doesn't work, check that no services are already running on port 6562.
+5. Open your browser and [click on this link](http://localhost:6562/docs). If this doesn't work, check that no services are already running on port 6562.
 6. Put in the details.
 7. Enjoy!
 
@@ -28,12 +28,12 @@ _note: This guide is for Linux/Mac and assumes you have docker and docker-compos
 
 ## Can I test it without running it myself?
 
-- ~~_sigh_ yes, as long as you don't break anything [ChatBot @ Morley's Exact Club](https://quackrcode.morleysexact.club)~~
+- _sigh_ yes, as long as you don't break anything [Quack'R Code @ Morley's Exact Club](https://qr.morleysexact.club/docs)
 Sorry, it's not quite ready yet but I'll have it up soon, I promise!
 
 ## Will you update this in the future?
 
-- ¯\\\_(ツ)\_/¯ Possibly if issues come up.
+- ¯\\\_(ツ)\_/¯ Possibly if issues arise.
 
 ## Who am I?
 
