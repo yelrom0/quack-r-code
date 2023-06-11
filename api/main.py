@@ -7,6 +7,7 @@ from fastapi import FastAPI
 
 # Local Imports
 from api.open_ai_api import AIApi
+from api.meta.schemas import GPTPrompt
 
 # create main server
 app = FastAPI(
@@ -17,9 +18,9 @@ app = FastAPI(
 
 
 @app.post("/test-gpt")
-async def test_chatgpt_prompt(text: str) -> str:
+async def test_chatgpt_prompt(payload: GPTPrompt) -> str:
     # setup api and send first message back to client
     ai_api = AIApi()
-    resp: str = await ai_api.get_stable_diffusion_prompt(text)
+    resp: str = await ai_api.get_stable_diffusion_prompt(payload.user_prompt)
     print(resp)
     return resp
