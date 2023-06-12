@@ -4,10 +4,12 @@
 
 # Package Imports
 from fastapi import FastAPI
+from fastapi.responses import Response
 
 # Local Imports
 from api.open_ai_api import AIApi
-from api.meta.schemas import GPTPrompt
+from api.qr_code import QRAPI
+from api.meta.schemas import GPTPrompt, QRCode
 
 # create main server
 app = FastAPI(
@@ -24,3 +26,21 @@ async def test_chatgpt_prompt(payload: GPTPrompt) -> str:
     resp: str = await ai_api.get_stable_diffusion_prompt(payload.user_prompt)
     print(resp)
     return resp
+
+
+@app.post(
+    "/test-qr",
+    responses={
+        200: {
+            "content": {"image/png": {}}
+        }
+    },
+    response_class=Response,
+)
+def test_qr_code(payload: QRCode) -> Response:
+    # setup api and send qr code representing the url back to client
+    qr_api = QRAPI(url=payload.url)
+    return Response(
+        content=qr_api.get_qr_code_as_bytes(),
+        media_type="image/png",
+    )
