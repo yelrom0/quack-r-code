@@ -10,3 +10,7 @@ venv
 
 # debug log is for debugging only
 debug_log.txt
+
+# no vscode config
+.vscode
+.vscode/*
