@@ -6,3 +6,10 @@ hypercorn==0.14.3
 hypercorn[h3]==0.14.3
 python-dotenv==0.20.0
 qrcode[pil]==7.4.2
+torch==2.0.1
+numpy==1.24.3
+opencv-python==4.7.0.72
+transformers==4.30.1
+diffusers==0.17.0
+accelerate==0.20.3
+xformers==0.0.20
